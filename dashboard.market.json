@@ -925,5 +925,5 @@
     "load_local": true,
     "hide": false
   },
-  "refresh": "10s"
+  "refresh": "5s"
 }

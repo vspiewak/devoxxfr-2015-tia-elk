@@ -150,7 +150,8 @@
           "style": {
             "font-size": "28pt"
           },
-          "title": "Trends"
+          "title": "Trends",
+          "reverse": false
         },
         {
           "error": false,
@@ -240,7 +241,17 @@
           "value_name": "Value",
           "spyable": true,
           "title": "CA",
-          "field": "price"
+          "field": "price",
+          "show": {
+            "count": true,
+            "min": true,
+            "max": true,
+            "mean": true,
+            "std_deviation": true,
+            "sum_of_squares": true,
+            "total": true,
+            "variance": true
+          }
         }
       ],
       "notice": false
@@ -608,5 +619,5 @@
     "load_local": true,
     "hide": false
   },
-  "refresh": "10s"
+  "refresh": "5s"
 }
