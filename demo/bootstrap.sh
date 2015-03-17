@@ -120,10 +120,10 @@ curl -XPUT 'localhost:9200/_snapshot/es_backup' -d '{
 curl -XPOST 'localhost:9200/_snapshot/es_backup/snapshot_1/_restore'
 
 echo -e "$ECHO_PREFIX Install Kibana 4"
-curl -O https://download.elasticsearch.org/kibana/kibana/kibana-4.0.0-linux-x64.tar.gz
-tar xzf kibana-4.0.0-linux-x64.tar.gz -C /opt
-ln -s /opt/kibana-4.0.0-linux-x64 /opt/kibana
-rm -f kibana-4.0.0-linux-x64.tar.gz
+curl -O https://download.elasticsearch.org/kibana/kibana/kibana-4.0.1-linux-x64.tar.gz
+tar xzf kibana-4.0.1-linux-x64.tar.gz -C /opt
+ln -s /opt/kibana-4.0.1-linux-x64 /opt/kibana
+rm -f kibana-4.0.1-linux-x64.tar.gz
 
 echo -e "$ECHO_PREFIX Install Kibana 4 startup script"
 cp /vagrant/kibana.initd.sh /etc/init.d/kibana

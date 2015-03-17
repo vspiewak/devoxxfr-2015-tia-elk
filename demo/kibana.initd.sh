@@ -19,12 +19,6 @@ PID=/var/run/kibana4.pid
 
 start() {
 
-
-  until curl -s 'localhost:9200/_cluster/health?wait_for_status=yellow'
-  do
-    echo "Wait elasticsearch to be up and running..."
-  done
-
   start-stop-daemon --start --background --quiet \
                     --pidfile "$PID" --make-pidfile \
                     --startas /bin/bash -- -c "exec /opt/kibana/bin/kibana > /var/log/kibana/kibana.log 2>&1"
